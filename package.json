@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "fstream": "^1.0.12",
     "lodash": "^4.17.15",
     "mysql": "^2.18.1",
     "mysql-server": "^1.0.5",
