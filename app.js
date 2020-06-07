@@ -1,11 +1,12 @@
-const lodash = require("lodash");
+/* const lodash = require("lodash"); */
 
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'me',
-  password : 'secret',
-  database : 'my_db'
+const mysql = require('/node_modules/mysql/index.js'); 
+
+const connection = mysql.createConnection({
+  host     : 'zedi.hu',
+  user     : 'zediihu1_data',
+  password : '1Database/2020',
+  database : 'zediihu1_database'
 });
 
 connection.connect();

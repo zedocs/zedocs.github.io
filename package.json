@@ -5,10 +5,10 @@
   "main": "app.js",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "install": "^0.13.0",
     "lodash": "^4.17.15",
-    "mysql": "github:mysqljs/mysql",
-    "npm": "^6.14.5"
+    "mysql": "^2.18.1",
+    "mysql-server": "^1.0.5",
+    "node-require": "0.0.10"
   },
   "devDependencies": {},
   "scripts": {
