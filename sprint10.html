@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Felhasználok</title>
 </head>
+
 <body>
-    <?php
-        echo "hello";
-    ?>
+  <div class="container">
+    <div class="row">
+      <div class="col 2"></div>
+      <div class="col-8">
+        <button id="getDataBtn" class="btn btn-block btn-primary">
+          Get users
+        </button>
+      </div>
+      <div class="col 2"></div>
+    </div>
+    <div class="row">
+      <div class="col 2"></div>
+      <div class="col-8">
+        <table id="userTable" class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+        <tbody></tbody>
+      </table>
+      </div>
+      <div class="col 2"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

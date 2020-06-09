@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "fstream": "^1.0.12",
-    "lodash": "^4.17.15",
-    "mysql": "^2.18.1",
-    "mysql-server": "^1.0.5",
-    "node-require": "0.0.10"
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {},
   "scripts": {
@@ -25,8 +25,5 @@
   "bugs": {
     "url": "https://github.com/zedocs/zedocs.github.io/issues"
   },
-  "homepage": "https://github.com/zedocs/zedocs.github.io#readme",
-  "directories": {
-    "lib": "lib"
-  }
+  "homepage": "https://github.com/zedocs/zedocs.github.io#readme"
 }
