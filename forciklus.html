@@ -8,52 +8,56 @@
 </head>
 
 <body>
+    <span id="kiir"></span>
+
     <script>
+        let spankiir = document.querySelector("#kiir");
         let tomb = ["alma", "körte", "barack", "narancs"];
 
         // régi alap módszer.
-        console.log("régi for ciklus tömbre");
+        spankiir.innerHTML += "régi for ciklus tömbre: for (i = 0; i < tomb.length; i++)<br>";
         for (i = 0; i < tomb.length; i++) {
-            console.log(tomb[i]);
+            spankiir.innerHTML += tomb[i] + "<br>";
         }
 
         // újabb egyszerűbb módszer.
-        console.log("for of módszer tömbre");
+        spankiir.innerHTML += "<hr>Egyszerűsített for of módszer ciklus tömbre: for (eleme of tomb) <br>";
         for (eleme of tomb) {
+            spankiir.innerHTML += eleme + "<br>";
             console.log(eleme);
         }
 
         let szoveg = "Szöveges adat";
-
-        console.log("régi for ciklus szövegre");
+        spankiir.innerHTML += "<hr>régi for ciklus szövegre<br>";
         for (i = 0; i < szoveg.length; i++) {
+            spankiir.innerHTML += szoveg[i] + "<br>";
             console.log(szoveg[i]);
         }
 
         // újabb egyszerűbb módszer.
-        console.log("for of módszer szövegre");
+        spankiir.innerHTML += "<hr>for of módszer szövegre<br>";
         for (eleme of szoveg) {
-            console.log(eleme);
+            spankiir.innerHTML += eleme + "<br>";
         }
 
         // objektum típusú adatok
-        console.log("objektum típusú adatok listázása");
+        spankiir.innerHTML += "<hr>objektum típusú adatok listázása<br>";
         let objektum = {
             nev: "Béla",
             kor: 33,
             neme: "férfi"
         }
-        
+
         // objektum típusú adatok kulcs értéke (nev, kor, neme)
-        console.log("objektum típusú adatok kulcsai");
+        spankiir.innerHTML += "<br>objektum típusú adatok kulcsai<br>";
         for (eleme in objektum) {
-            console.log(eleme);
+            spankiir.innerHTML += eleme + "<br>";
         }
 
         // objektum típusú adatok értéke kulcsaik alapján (nev, kor, neme)
-        console.log("objektum típusú adatok értéke kulcsaik alapján");
+        spankiir.innerHTML += "<br>objektum típusú adatok értéke kulcsaik alapján<br>";
         for (eleme in objektum) {
-            console.log(objektum[eleme]);
+            spankiir.innerHTML += objektum[eleme] + "<br>";
         }
     </script>
 </body>
