@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Alap oldal.
+    <div id="div1">alma</div>
+</body>
+    
+<script>
+    function szoroz(a, b) {
+        console.log(a * b);
+        document.querySelector("#div1").innerHTML = a * b;
+        //document.body.innerHTML = a * b;
+        return (a * b)
+    }
+    szoroz(4, 9)
+</script>
+
+</html>

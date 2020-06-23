@@ -50,7 +50,8 @@ function fillDataTable(data, tableID) {
             } else {
                 let input = createAnyElement("input", {
                     class: "form-control",
-                    value: row[k]
+                    value: row[k],
+                    name: k
                 });
                 td.appendChild(input);
             }
@@ -72,7 +73,7 @@ function createAnyElement(name, attributes) {
 
 function createBtnGroup(uid) {
     let group = createAnyElement("div", { class: "btn btn-group" });
-    let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "getInfo(this)" });
+    let infoBtn = createAnyElement("button", { id: `${uid}`, class: "btn btn-info", onclick: "SetRow(this)" });
     infoBtn.innerHTML = '<i class="fa fa-refresh" aria-hidden="true"></i>';
     // modified by zedi id: `${uid}`
     let delBtn = createAnyElement("button", { id: `${uid}`, class: "btn btn-danger", onclick: "delRow(this)" });
@@ -118,11 +119,13 @@ function newUserRow(row) {
     //    for (let k in { id: '', name: '', email: '' }) {
     for (let k of keys) {
         let td = createAnyElement("td");
-        let input = createAnyElement("input", {
-            class: "form-control",
-            name: k
-        });
-        td.appendChild(input);
+        if (k != "id") {
+            let input = createAnyElement("input", {
+                class: "form-control",
+                name: k
+            });
+            td.appendChild(input);            
+        }
         tr.appendChild(td);
     }
 
@@ -190,4 +193,32 @@ function getRawData(tr) {
         data[inputs[i].name] = inputs[i].value;
     }
     return data;
+}
+
+function SetRow(btn) {
+    let tr = btn.parentElement.parentElement.parentElement;
+    let data = getRawData(tr);
+    //   console.log(data);
+ 
+     // modified by zedi
+     let id2 = btn["id"].substring(7);
+
+     let fetchOptions = {
+        method: "PUT",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+
+    fetch(`http://localhost:3000/users/${id2}`, fetchOptions).then(
+        resp => resp.json(),
+        err => console.error(err)
+    ).then(
+        //        data => console.log(data)
+        data => startGetUsers()
+    );
+
 }

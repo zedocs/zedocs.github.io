@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tomb = ["alma", "körte", "barack", "narancs"];
+
+        // régi alap módszer.
+        console.log("régi for ciklus tömbre");
+        for (i = 0; i < tomb.length; i++) {
+            console.log(tomb[i]);
+        }
+
+        // újabb egyszerűbb módszer.
+        console.log("for of módszer tömbre");
+        for (eleme of tomb) {
+            console.log(eleme);
+        }
+
+        let szoveg = "Szöveges adat";
+
+        console.log("régi for ciklus szövegre");
+        for (i = 0; i < szoveg.length; i++) {
+            console.log(szoveg[i]);
+        }
+
+        // újabb egyszerűbb módszer.
+        console.log("for of módszer szövegre");
+        for (eleme of szoveg) {
+            console.log(eleme);
+        }
+
+        // objektum típusú adatok
+        console.log("objektum típusú adatok listázása");
+        let objektum = {
+            nev: "Béla",
+            kor: 33,
+            neme: "férfi"
+        }
+        
+        // objektum típusú adatok kulcs értéke (nev, kor, neme)
+        console.log("objektum típusú adatok kulcsai");
+        for (eleme in objektum) {
+            console.log(eleme);
+        }
+
+        // objektum típusú adatok értéke kulcsaik alapján (nev, kor, neme)
+        console.log("objektum típusú adatok értéke kulcsaik alapján");
+        for (eleme in objektum) {
+            console.log(objektum[eleme]);
+        }
+    </script>
+</body>
+
+</html>
