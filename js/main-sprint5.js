@@ -13,7 +13,7 @@ function calcAmount() {
 }
 
 function showSumPrice(price = 1000, amountNumber=1) {
-    amountNumber=amountNumber || 0;
+    amountNumber=amountNumber || 0; 
     let showAmount = document.querySelector("span.show-amount")
     if (amountNumber > 10) {
         alert("Maximum 10 terméket vásárolhat!");

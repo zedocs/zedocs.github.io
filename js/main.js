@@ -89,6 +89,7 @@ function createBtnGroup(uid) {
 function delRow(btn) {
     let tr = btn.parentElement.parentElement.parentElement;
     let id = tr.querySelector("td:first-child").innerHTML;
+//    let id = tr.querySelector("td:first-child").querySelector("input").value ;
 
     // modified by zedi
     let id2 = btn["id"].substring(7);
@@ -108,8 +109,6 @@ function delRow(btn) {
         }
     );
 
-    console.log(id);
-    console.log(id2);
 
 }
 
