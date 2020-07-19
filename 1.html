@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="lib/bootstrap-4.4.1/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/.../1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/.../js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<title>Document</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="/bt.html">Navbar</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="/bt.html">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/contact.html">Contact</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/login.html">Login</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+</div>
+</nav>
+<div class="container">
+<div class="row">
+<div class="col-3">
+<div>
+<div class="col-6">
+<h3>Hamburger rendelés</h3>
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+<strong>Kedves vásárlónk!</strong>
+A rendeléshez kérjük töltse ki az űrlapot.
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<form action="">
+<div class="form-group">
+<label for="">feltét</label>
+<select id="topInput" name="top-input" class="form-control">
+</select>
+</div>
+<div class="form-group">
+<label for="">Mennyiség</label>
+<input type="number" name="amount-input" class="form-control" value="1">
+<small class="form-text text-muted">
+Minimum 1, maximum 10db
+</small>
+</div>
+<div class="form-group">
+Fizetendő:<span class="show-amount">0</span>Ft
+</div>
+<button type="submit" class="btn btn-primary"> Megrendelés</button>
+</form>
+</div>
+<div class="col-3"></div>
+</div>
+</div>
+<script src="sprint3/js/main.js"></script>
+<!-- <script src="sprint3/js/scope.js"></script> -->
+<script src="sprint3/js/algo.js"></script>
+</body>
+</html>
